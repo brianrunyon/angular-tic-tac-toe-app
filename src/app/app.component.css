@@ -16,3 +16,43 @@
    font-size: 150%;
    padding: 8px;
  }
+
+
+ .header {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  flex-wrap: nowrap;
+
+  padding: 5px;
+  margin-bottom: 5px;
+}
+
+.footer {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  flex-wrap: nowrap;
+
+  padding: 5px;
+  border-top: 2px solid #cccccc;
+  margin-bottom: 5px;
+}
+
+.game-controls {
+  display: flex;
+  align-self: flex-start;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  margin: 8px;
+}
+
+button {
+  background: #e0e0e0;
+  padding: 5px;
+  box-shadow: 2px 2px 2px;
+}
+
+button:hover {
+  background: #f8e09a;
+}

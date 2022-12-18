@@ -10,6 +10,10 @@ export class AppComponent {
 
   state: GameState = getInitialGameState();
 
+  onRestartGameClick() {
+    this.state = getInitialGameState();
+  }
+
   onSpotClick(row: number, column: number) {
     const currentBoard: ('' | 'X' | 'O')[][] = this.state.currentBoard;
     const winnerPlayer: ('' | 'X' | 'O') = this.state.winnerPlayer;

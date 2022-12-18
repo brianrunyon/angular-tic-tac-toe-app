@@ -1,4 +1,6 @@
-<h2>tic tac toe</h2>
+<div class="header">
+  <h2>tic tac toe</h2>
+</div>
 
 <div class="winner-player-label" *ngIf="state.winnerPlayer !== ''">Player {{state.winnerPlayer}} WINS!</div>
 
@@ -13,5 +15,11 @@
       </button>
     </span>
 
+  </div>
+</div>
+
+<div class="footer">
+  <div class="game-controls">
+    <button (click)="onRestartGameClick()">Restart Game</button>
   </div>
 </div>
