@@ -1,11 +1,31 @@
-.winner-player-label {
-  color: blue;
+.game-state-label {
+  color: inherit;
+  border: 6px solid #164fbb;
+  border-radius: 8px;
   font-weight: 600;
+  font-style: italic;
   padding: 5px;
+  width: fit-content;
+}
+
+.game-state-label.no-winner-label {
+  color: #164fbb;
+  border-color: #de6900;
+}
+.winner-player-label {
+  color: #164fbb;
+  border-color: #164fbb;
 }
 .current-player-label {
-   font-weight: 600;
-   padding: 5px;
+  border-color: transparent;
+  font-weight: 600;
+  padding: 5px;
+ }
+.current-player-label .indicator {
+  color: #164fbb;
+  font-weight: 600;
+  font-style: italic;
+  padding: 5px;
  }
  .board {
    text-align: left;
