@@ -7,6 +7,7 @@ interface GameState {
   currentPlayer: ('X' | 'O');
   currentBoard: ('' | 'X' | 'O')[][];
   winnerPlayer: ('' | 'X' | 'O');
+  isDraw: boolean;
 }
 
 interface ValidationState {
@@ -68,7 +69,8 @@ const getInitialGameState = () => {
       ['', '', ''],
       ['', '', '']
     ],
-    winnerPlayer: ''
+    winnerPlayer: '',
+    isDraw: false
   };
   return state;
 };
@@ -152,8 +154,26 @@ const checkBoard = (state: GameState) => {
     }
 
   }
+
+  // check draw
+  state.isDraw = checkDraw(state);
+  if(state.isDraw) {
+    console.log(`no winner: draw game`);
+    return state;
+  }
+
   return state;
 };
+
+const indexOfBlankSpot = (board: ('' | 'X' | 'O')[][]) => {
+  const flatten = (previousValue: ('' | 'X' | 'O')[], currentValue: ('' | 'X' | 'O')[]) => [...previousValue, ...currentValue];
+  return board.reduce(flatten, []).indexOf('');
+};
+
+const checkDraw = (state: GameState) => {
+  let board: ('' | 'X' | 'O')[][] = state.currentBoard;
+  return (indexOfBlankSpot(board) === -1);
+}
 
 export {
   GameState,

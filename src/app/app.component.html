@@ -2,9 +2,11 @@
   <h2>tic tac toe</h2>
 </div>
 
-<div class="winner-player-label" *ngIf="state.winnerPlayer !== ''">Player {{state.winnerPlayer}} WINS!</div>
+<div class="no-winner-label" *ngIf="state.isDraw">Draw: no winner</div>
 
-<div class="current-player-label" *ngIf="state.winnerPlayer === ''">Current Player's Turn: {{state.currentPlayer}}</div>
+<div class="winner-player-label" *ngIf="!state.isDraw && (state.winnerPlayer !== '')">Player {{state.winnerPlayer}} WINS!</div>
+
+<div class="current-player-label" *ngIf="!state.isDraw && (state.winnerPlayer === '')">Current Player's Turn: {{state.currentPlayer}}</div>
 
 <div class="board">
   <div *ngFor="let row of state.currentBoard; let r = index">
