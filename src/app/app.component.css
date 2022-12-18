@@ -1,0 +1,18 @@
+.winner-player-label {
+  color: blue;
+  font-weight: 600;
+  padding: 5px;
+}
+.current-player-label {
+   font-weight: 600;
+   padding: 5px;
+ }
+ .board {
+   text-align: left;
+   padding: 20px;
+ }
+ .board button {
+   font-family: Consolas;
+   font-size: 150%;
+   padding: 8px;
+ }
