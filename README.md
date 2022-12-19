@@ -19,13 +19,4 @@ https://angular-ivy-2r38tn.stackblitz.io/
 
 http://github.com/brianrunyon/angular-tic-tac-toe-app
 
-http://brianrunyon.github.io/angular-tic-tac-toe-app
-
-
-npm run ng add angular-cli-ghpages
-
-npm run ng deploy --base-href=/angular-tic-tac-toe-app/
-
-npm run ng build --output-path docs --base-href /angular-tic-tac-toe-app/
-
 
